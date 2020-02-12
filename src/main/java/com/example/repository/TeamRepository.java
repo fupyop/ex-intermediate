@@ -40,7 +40,7 @@ public class TeamRepository {
 	
 	/**
 	 * 主キーから野球チーム詳細を取得する.
-	 * @param id
+	 * @param id ID
 	 * @return 野球チーム情報
 	 */
 	public Team load(Integer id) {
@@ -58,7 +58,7 @@ public class TeamRepository {
 	
 	/**
 	 * 野球チーム一覧を発足日の昇順で取得する.
-	 * @return
+	 * @return　野球チーム一覧
 	 */
 	public List<Team> findAll(){
 		String sql ="SELECT id,league_name,team_name,headquarters,inauguration,history"

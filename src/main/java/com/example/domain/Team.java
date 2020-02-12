@@ -1,11 +1,34 @@
 package com.example.domain;
 
+/**
+ * @author fuka
+ *
+ */
 public class Team {
+	
+	/**
+	 * ID
+	 */
 	private Integer id;
+	/**
+	 * リーグ名
+	 */
 	private String leagueName;
+	/**
+	 * チーム名
+	 */
 	private String teamName;
+	/**
+	 * 本拠地
+	 */
 	private String headquarters;
+	/**
+	 * 発足日
+	 */
 	private String inauguration;
+	/**
+	 * 歴史
+	 */
 	private String history;
 	public Integer getId() {
 		return id;

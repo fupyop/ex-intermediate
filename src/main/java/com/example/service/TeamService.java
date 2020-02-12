@@ -32,7 +32,7 @@ public class TeamService {
 	
 	
 	/**
-	 * @param id
+	 * @param id ID
 	 * @return　野球チーム詳細情報
 	 */
 	public Team showDetail (Integer id) {
