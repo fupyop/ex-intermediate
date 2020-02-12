@@ -49,11 +49,4 @@ public class TeamController {
 		model.addAttribute("team" ,team);
 		return "ex1-result";
 	}
-	
-	
-	
-	
-	
-	
-	
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.example.domain.Team;
 
 /**
- * teamテーブルを操作するリポジトリ.
+ * teamsテーブルを操作するリポジトリ.
  * @author fuka
  *
  */

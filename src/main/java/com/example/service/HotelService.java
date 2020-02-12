@@ -20,7 +20,7 @@ public class HotelService {
 	 * @return ホテル詳細情報
 	 */
 	public List<Hotel> searchByLessThanPrice(Integer price) {
-		return hotelRepository.load(price);
+		return hotelRepository.findByPrice(price);
 	}
 	
 	/**

@@ -1,6 +1,7 @@
 package com.example.domain;
 
 /**
+ * ドメイン情報.
  * @author fuka
  *
  */

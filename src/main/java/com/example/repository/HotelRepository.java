@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.example.domain.Hotel;
 
 /**
- * hotelテーブルを操作するリポジトリ.
+ * hotelsテーブルを操作するリポジトリ.
  * @author fuka
  *
  */
@@ -40,11 +40,11 @@ public class HotelRepository {
 	
 	
 	/**
-	 * 主キーからホテル情報詳細を取得する.
-	 * @param price
+	 * ホテル情報詳細を取得する.
+	 * @param price　価格
 	 * @return ホテル情報
 	 */
-	public List<Hotel> load(Integer price) {
+	public List<Hotel> findByPrice(Integer price) {
 		String sql ="select id, area_name, hotel_name, address, nearest_station,price,parking"
 				+ " FROM hotels WHERE price <=:price ORDER BY price DESC" ;
 		SqlParameterSource param = new MapSqlParameterSource().addValue("price", price);
