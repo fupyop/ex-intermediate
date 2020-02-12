@@ -11,11 +11,20 @@ import org.springframework.stereotype.Repository;
 
 import com.example.domain.Team;
 
+/**
+ * teamテーブルを操作するリポジトリ.
+ * @author fuka
+ *
+ */
 @Repository
 public class TeamRepository {
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 	
+	
+	/**
+	 * teamオブジェクトを生成するローマッパー.
+	 */
 	private static RowMapper<Team> TEAM_ROW_MAPPER = (rs,i) -> {
 		Team team = new Team();
 		team.setId(rs.getInt("id"));
@@ -30,9 +39,9 @@ public class TeamRepository {
 	
 	
 	/**
-	 * 主キー検索
+	 * 主キーから野球チーム詳細を取得する.
 	 * @param id
-	 * @return
+	 * @return 野球チーム情報
 	 */
 	public Team load(Integer id) {
 		String sql = "SELECT id,league_name,team_name,headquarters,inauguration,history"
@@ -46,6 +55,11 @@ public class TeamRepository {
 		
 	}
 	
+	
+	/**
+	 * 野球チーム一覧を発足日の昇順で取得する.
+	 * @return
+	 */
 	public List<Team> findAll(){
 		String sql ="SELECT id,league_name,team_name,headquarters,inauguration,history"
 				+ " FROM teams ORDER BY inauguration";

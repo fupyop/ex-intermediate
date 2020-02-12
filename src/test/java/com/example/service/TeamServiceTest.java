@@ -26,14 +26,14 @@ class TeamServiceTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testshowList() {
-		assertThat("チーム一覧が正しく表示されてません",showList ,comparesEqualTo());
-	}
-	
-	@Test
-	public void testshowDetail() {
-		assertThat("チーム詳細が正しく表示されてません",showDetail, comparesEqualTo());
-	}
+//	@Test
+//	public void testshowList() {
+//		assertThat("チーム一覧が正しく表示されてません",showList ,comparesEqualTo());
+//	}
+//	
+//	@Test
+//	public void testshowDetail() {
+//		assertThat("チーム詳細が正しく表示されてません",showDetail, comparesEqualTo());
+//	}
 
 }

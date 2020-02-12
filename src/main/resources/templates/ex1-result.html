@@ -6,9 +6,13 @@
 </head>
 <body>
 <strong>球団名</strong>
+<p th:text="${team.teamName}"></p>
 <strong>本拠地</strong>
+<p th:text="${team.headquarters}"></p>
 <strong>発足</strong>
+<p th:text="${team.inauguration}"></p>
 <strong>歴史</strong>
+<pre th:text="${team.history}"></pre>
 
 <a href="ex1-result.html" th:href="@{/team/showList}">
 <button>戻る</button>

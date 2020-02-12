@@ -18,14 +18,25 @@ public class TeamController {
 	
 	
 	
+	/**
+	 * showList()メソッドの呼び出し、野球チーム一覧(List)を取得する.
+	 * @param model
+	 * @return 野球チーム一覧のページ
+	 */
 	@RequestMapping("/showList")
 	public String showList(Model model) {
 		List<Team> teamList = teamService.showList();
+		System.out.println(teamList.get(0).getId());
 		model.addAttribute("teamList",teamList);
 		return "ex1";
 		
 	}
 	
+	/**
+	 * @param id
+	 * @param model
+	 * @return　野球チーム詳細のページ
+	 */
 	@RequestMapping("/showDetail")
 	public String showDetail(String id,Model model) {
 		Team team = teamService.showDetail(Integer.parseInt(id));

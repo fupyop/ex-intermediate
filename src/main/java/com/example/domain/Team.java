@@ -48,5 +48,5 @@ public class Team {
 		return "Team [id=" + id + ", leagueName=" + leagueName + ", teamName=" + teamName + ", headquarters="
 				+ headquarters + ", inauguration=" + inauguration + ", history=" + history + "]";
 	}
-
+	
 }
